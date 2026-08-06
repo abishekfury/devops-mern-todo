@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { server, app } = require('../backend/index');
+const { server, app } = require('../index');
 const mongoose = require('mongoose');
 
 describe('GET api/tasks', () => {
@@ -11,6 +11,7 @@ describe('GET api/tasks', () => {
         const res = await request(app).get('/api/tasks');
         expect(typeof res.body).toBe("object");
         expect(res.body).toHaveProperty("tasks");
+        console.log(res.body.tasks, 'DATA SEEDED')
     })
 })
 
