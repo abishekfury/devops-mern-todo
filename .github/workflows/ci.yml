@@ -15,8 +15,8 @@ jobs:
           - 27017:27017
 
     env:
-      PORT: 5000
-      MONGO_URI: mongodb://localhost:27017/testdb
+      PORT: ${{ secrets.PORT }}
+      MONGO_URI: ${{ secrets.MONGO_URI }}
       JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
     steps:
