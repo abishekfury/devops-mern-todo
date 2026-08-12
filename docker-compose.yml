@@ -23,3 +23,6 @@ services:
       - backend
     env_file:
       - "./frontend/.env.prod"
+
+volumes:
+  mongo-data:
